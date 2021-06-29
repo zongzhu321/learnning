@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="UTF-8">
+         <title>双飞翼布局</title>
+         <style>
+ 
+ #center{
+     float:left;
+     width:100%;/*左栏上去到第一行*/     
+     height:100px;
+     background:blue;
+ }
+ #left{
+     float:left;
+     width:180px;
+     height:100px;
+     left: 0;
+     background:#0c9;
+ }
+ #right{
+     float:left;
+     width:200px;
+     height:100px;
+     right: 0;
+      background:red;
+ }
+ 
+ /*给内部div添加margin，把内容放到中间栏，其实整个背景还是100%*/ 
+ #inside{
+     margin:0 200px 0 180px;
+     height:100px;
+ }
+
+</style>
+<script>
+    var a = {
+        i: 0,
+        toString: function (){
+            console.log('string')
+            return ++this.i
+        },
+        // valueOf: function(){
+        //     console.log('valueOf')
+        // }
+    }
+    // Object.defineProperty(window.a,function(){
+        
+    // })
+    if(a == 1 && a == 2 && a == 3){
+        console.log(111)
+    }
+
+    // var b = 10;
+    // (function b(){
+    //     var b = 20;
+    //     console.log(b)
+    // })()
+    // console.log(b)
+    // async function async1(){
+    //     console.log('async1 start')
+    //     await async2();
+    //     console.log('async1 end')
+    // }
+
+    // async function async2(){
+    //     console.log('async2')
+    // }
+
+    // console.log('script start')
+
+    // setTimeout(function(){
+    //     console.log('setTimeout')
+    // },0)
+
+    // async1();
+    // new Promise(function (resolve){
+    //     console.log('promise1')
+    //     resolve();
+    // }).then(function(){
+    //     console.log('promise2')
+    // });
+    // console.log('script end')
+
+    // script start
+    // async1 start
+    // async2
+    // promise1
+    // script end
+    // async1 end
+    // promise2
+    // setTimout
+
+    // function aa (){
+    //     name: 'iii'
+    //     return this
+    // }
+
+    // console.log(new aa().name)
+</script>
+     </head>
+     <body>
+         <div id="center">
+         </div>
+         <div id="left">left</div>
+         <div id="right">right</div>
+     </body>
+ </html>

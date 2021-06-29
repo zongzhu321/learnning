@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .list{
+            width: 1000px;
+            height: 500px;
+            border: 4px solid skyblue;
+            margin: 200px auto 0;
+        }
+        .list li{
+            float: left;
+            height: 100%;
+            box-shadow: 0 0 10px #ccc;
+            /* overflow: hidden; */
+        }
+        .list li img{
+            width: 100%;
+            height: 100%;
+        }
+        .list li.one{
+            width: 700px;
+        }
+        input[name="switch"]{
+            opacity: 0;
+            cursor: pointer;
+            width: 100px;
+            height: 500px;
+            transition: 0.4s;
+        }
+        input[name="switch"]:checked{
+            width: 700px;
+        }
+        input[name="switch"]:checked ~ .bg{
+            opacity: 1;
+        }
+        .list li:nth-child(1),
+        .list li:nth-child(1) .bg{
+            background: url('./img/1.jpeg') no-repeat center/cover;
+        }
+        .list li:nth-child(2),
+        .list li:nth-child(2) .bg{
+            background: url('./img/2.jpeg') no-repeat center/cover;
+        }
+        .list li:nth-child(3),
+        .list li:nth-child(3) .bg{
+            background: url('./img/3.jpeg') no-repeat center/cover;
+        }
+        .list li:nth-child(4),
+        .list li:nth-child(4) .bg{
+            background: url('./img/4.jpeg') no-repeat center/cover;
+        }
+        .list li .bg{
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            transition: 0.5s;
+            filter: blur(3px);
+        }
+    </style>
+    <body>
+        <ul class="list">
+            <li>
+                <input name="switch" checked type="radio">
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input name="switch" type="radio">
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input name="switch" type="radio">
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input name="switch" type="radio">
+                <div class="bg"></div>
+            </li>
+            <!-- <li>
+                <input name="switch" type="radio">
+            </li>
+            <li>
+                <input name="switch" type="radio">
+            </li> -->
+        </ul>
+    </body>
+</head>
+
+<script>
+    
+</script>
+
+<body>
+    <script src="./test.js"></script>
+</body>
+
+</html>
